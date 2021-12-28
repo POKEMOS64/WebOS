@@ -1,0 +1,33 @@
+<style>
+  [v-cloak]{
+    display: none;
+  }
+</style>
+<div class="idx__start" >
+  <div class="container">
+
+    <div class="wrap" id="app" v-cloak> 
+      <div class="col xl12 info">
+        <div v-html='myHtml'></div>
+        <h4 v-text='appTitle'></h4>
+          <span v-once>
+            {{appTitle}}
+          </span>
+
+        <p v-pre>{{appTitle}}</p>
+      </div>
+      <div  class="col xl12">
+        <ul>
+          <li v-for='item in 7'>{{item}}</li>
+        </ul>
+        <button class="btn primary" @click='appTitle = "Индекс массы"'>Изменить </button>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+</div>
+

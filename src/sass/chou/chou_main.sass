@@ -1,0 +1,74 @@
+.sidebar
+  +bg(saidBar)
+  padding: 3rem
+  .text__blur
+    font-size: 2.48rem
+    font-weight: 100
+    background: #ffffffb3
+    margin: 1rem 0
+    padding: 3rem
+.navi
+  background: #00b3f2
+  .wrap
+    overflow: visible
+  ul
+    display: flex
+    ul
+      display: none
+    li
+      position: relative
+      a
+        display: block
+        padding: 1rem
+        color: #fff
+        text-decoration: none
+        font-size: 1.1rem
+        &:hover
+          color: gray
+          background: #fff
+      &:hover
+        &>a
+          color: gray
+          background: #fff
+        ul
+          width: 100%
+          position: absolute
+          background: #00b3f2
+          z-index: 99
+          left: 0
+          display: flex
+          flex-direction: column
+          a
+            font-size: 1rem
+            padding: .5rem
+            line-height: 1.2
+.block__text
+  .chema
+    .wrap
+      overflow: visible
+    .arrow
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+    .col
+      margin-bottom: 1rem
+      padding: .5rem
+      text-align: center
+      border: 1px solid #000
+      .col
+        border: 0
+.block__table
+  .items
+    margin: 4rem .5rem
+    border-bottom: 1px solid #00b3f2
+    .line
+      display: flex
+      margin-bottom: 1rem
+      padding: .5rem
+      border-bottom: 1px solid gray
+      div
+        min-width: 320px
+        &.text
+          margin: 0 1rem
+

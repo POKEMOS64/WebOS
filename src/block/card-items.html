@@ -1,0 +1,87 @@
+<div class="col xl2 items todo_list__tovar" itemtype="http://schema.org/Product" itemscope>
+  <div class="wrap">
+    <div class="col xl12 pictures">
+      [[!msGallery]]
+    </div>
+    <div class="col xl12 name">
+      [[*pagetitle]]
+      <meta itemprop="name" content="[[*pagetitle]]">
+      <meta itemprop="description" content="[[*description:default=`[[*pagetitle]]`]]">
+    </div>
+
+    <div class="col xl12 opt" itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope>
+      <meta itemprop="category" content="[[#[[*parent]].pagetitle]]">
+      <meta itemprop="offerCount" content="1">
+      <meta itemprop="price" content="[[+price:replace=` ==`]]">
+      <meta itemprop="lowPrice" content="[[+price:replace=` ==`]]">
+      <meta itemprop="priceCurrency" content="RUR">
+      <form class="form-horizontal ms2_form" method="post">
+        
+        <input type="hidden" name="id" value="[[*id]]"/>
+
+        <div class="opt_1">
+          <div class="wrap">
+            <div class="col xl6 s12">[[+article:default=`-`]]</div>
+            <label class="col xl6 s12">[[%ms2_product_article]]:</label>
+          </div>
+          
+        </div>
+        <div class="opt_1">
+          <div class="wrap">
+            <div class="col xl6 s12">[[+price]] [[%ms2_frontend_currency]]
+              [[+old_price:gt=`0`:then=`
+              <span class="old_price ml-2">[[+old_price]] [[%ms2_frontend_currency]]</span>
+              `:else=``]]</div>
+            <label class="col xl6 s12">[[%ms2_product_price]]:</label>
+          </div>
+          
+        </div>
+
+        <div class="opt_1">
+          <div class="wrap">
+            <div class="col xl6 s12">
+              <input type="number" name="count" id="product_price" class="form-control col-md-6" value="1"/>
+              <div class="input-group-append">
+                  <span class="input-group-text">[[%ms2_frontend_count_unit]]</span>
+              </div>
+            </div>
+            <label class="col xl6 s12">[[%ms2_cart_count]]:</label>
+          </div>
+          
+        </div>
+
+
+        <div class="opt_1">
+          <div class="wrap">
+            <div class="col xl6 s12">[[+weight]] [[%ms2_frontend_weight_unit]]</div>
+            <label class="col xl6 s12">[[%ms2_product_weight]]:</label>
+          </div>
+          
+        </div>
+
+        <div class="opt_1">
+          <div class="wrap">
+            <div class="col xl6 s12">[[+made_in:default=`-`]]</div>
+            <label class="col xl6 s12">[[%ms2_product_made_in]]:</label>
+          </div>
+          
+        </div>
+
+        [[msOptions?options=`color,size`]]
+
+        [[msProductOptions]]
+        <div class="price__click">
+          <button type="submit" class="btn btn-primary" name="ms2_action" value="cart/add">
+            [[%ms2_frontend_add_to_cart]]
+        </button>
+        </div>
+      </form>
+
+    </div>
+    
+  </div>
+
+
+</div>
+
+

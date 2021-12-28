@@ -1,0 +1,33 @@
+.our_advantages
+  &__title
+    margin-top: 3rem
+    margin-bottom: 2rem
+  &__click
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 2.5rem 0
+    .button
+      box-shadow: 5px 11px 13px -1px #00000026
+  .items
+    padding-left: 3rem
+    padding-right: 2rem
+    @media ( max-width:990px )
+      margin-bottom: 1rem
+    &::before
+      content: ''
+      width: 30px
+      height: 30px
+      +bg(k_class,png)
+      background-repeat: no-repeat
+      position: absolute
+      left: 0
+    &__title
+      font:
+        size: 1.2rem
+        weight: 700
+      text-transform: uppercase
+      margin-bottom: 1.8rem
+    &__text
+      font:
+        size: 1rem

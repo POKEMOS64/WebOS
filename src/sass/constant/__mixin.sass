@@ -1,0 +1,225 @@
+=bg($img,$for: webp)
+  background-image: url('/img/#{$img}.#{$for}')
+
+$colums: 12
+$gutter: (100% /$colums)* 0.05
+$one: (100% / $colums)
+
+// Разрешения экранов
+$pc: 1920px
+$pc-1: 1200px
+$large: 992px
+$table: 650px
+$mobile: 320px
+
+// Типография текста
+$line: 1.333
+$base-line: 14px
+
+// Подключаем шрифт
+$font: 'Montserrat', sans-serif
+$font2: 'Montserrat', sans-serif
+
+
+.hidden-xl
+  @media ( max-width:1000px )
+    display: flex
+    align-items: center
+    justify-content: center
+.button
+  display: block
+  width: 200px
+  height: 50px
+  border-radius: 25px
+  background: hsla(104, 87%, 32%, 1)
+  padding: 14px 7px 8px
+  text-align: center
+  font:
+    size: 1.2rem
+    weight: 200
+  color: white
+  text-decoration: none
+  &.btn
+    border: 0
+    padding-top: 10px
+    font:
+      weight: 300 !important
+    @media ( max-width:1000px )
+      width: 80%
+
+  &.descr
+    margin: 2rem auto
+    background: hsla(0, 0%, 77%, 1)
+    width: 160px
+    color: black
+    box-shadow: 5px 11px 13px -1px #00000026
+    font:
+      size: 1.1rem
+      weight: 400
+.bl-title
+  margin-top: 1.33rem
+  font:
+    size: 2.2rem
+    weight: 700
+  text-align: center
+  text-transform: uppercase
+  @media ( max-width:760px )
+    font:
+      size: 1.33rem
+
+
+.catalog__box__deff
+  position: relative
+  display: block
+  border: 1px solid #292929
+  margin: 1rem 0
+  overflow: hidden
+  img
+    margin: 0
+  .catalog-box-list
+    // border: 1px solid #d1d1d1
+    // border-radius: 10px
+    max-width: 90%
+    background: #fffffff3
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    margin: 1.5rem auto
+    opacity: 0
+    
+    -webkit-animation-name: fadeOut
+    animation-name: fadeOut
+    -webkit-animation-duration: 1s
+    animation-duration: 1s
+    -webkit-animation-fill-mode: both
+    animation-fill-mode: both
+    &__link
+      padding: .5rem
+      li
+        margin: .3rem 0
+      a
+        padding: .7rem
+        display: block
+        width: 100%
+        padding-left: 25px
+        position: relative
+        font:
+          size: 1rem
+          weight: 100
+        &::before
+          position: absolute
+          right: 0
+          left: 0
+          bottom: 0
+          margin: 0 auto
+          content: ''
+          width: 0
+          height: 2px
+          background: #000000
+    .name
+      font-size: 1.4rem
+      font-family: $font2
+      padding: 2rem 1rem
+      border-bottom: 1px solid #cccccc
+      // color: #fff
+      // background: #292929
+  &:hover
+    .catalog-box-list 
+      display: block
+      -webkit-animation-name: fadeIn
+      animation-name: fadeIn
+      -webkit-animation-duration: 1s
+      animation-duration: 1s
+      -webkit-animation-fill-mode: both
+      animation-fill-mode: both
+      &__link
+        a
+          
+          &:hover
+            &::before
+              width: 100%
+              @extend .bottom-liner
+
+.jGrowl-notification.alert.ui-state-highlight.ui-corner-all.ms2-message-success
+  font-size: .8rem
+  padding: 1rem
+  font-family: $font
+  border: 1px solid #fff
+  border-radius: 0 !important
+  color: #fff !important
+  background: #000 !important
+
+#ViewGrid
+  width: 0
+  height: 0
+  opacity: 0
+  &:checked + span.slide::before
+    transform: translatex(40px)
+.sortb
+  width: 150px
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin-bottom: 1rem
+  h4
+    text-align: left
+  label
+    display: block
+    height: 15px
+    width: 60px
+    position: relative
+    transform: rotate(90deg) translate(50px, 40px)
+  span.slide
+    position: absolute
+    width: 100%
+    height: 100%
+    background: #dadada
+    border-radius: 30px
+    &::before
+      position: absolute
+      content: ''
+      height: 20px
+      width: 20px
+      background: #fff
+      border-radius: 50%
+      top: -2px
+      left: 0px
+      transition: .5s
+      box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 7px 1px
+  .txt
+    // left: -60px
+    position: relative
+    img
+      width: 32px
+//CaruselGroup
+
+.owl-nav
+  button
+    width: 20px
+    height: 20px
+    background: #fff
+    background-repeat: no-repeat
+    background-position: center
+    
+  .owl-prev
+    +bg(left_arrow,png) 
+  .owl-next
+    +bg(right_arrow,png)
+.owl-dots
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  align-items: center
+  justify-content: center
+  button
+    width: 10px !important
+    height: 10px !important
+    background: #000 !important
+    margin: .5rem
+    border-radius: 50px
+    &.active
+      background: #FFCC15 !important

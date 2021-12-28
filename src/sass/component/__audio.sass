@@ -1,0 +1,396 @@
+#data
+  &.full
+    font-family: $font
+    position: fixed
+    z-index: 9999
+    background: #fff
+    width: 100% 
+    height: 100%
+    top: 0
+    display: flex
+    align-items: center
+    justify-content: center
+  h1
+    color: #000
+    text-transform: uppercase
+  
+header
+  background: #000
+  -webkit-box-shadow: -1px 11px 18px 7px rgba(57, 58, 58, 0.2)
+  -moz-box-shadow: -1px 11px 18px 7px rgba(57, 58, 58, 0.2)
+  box-shadow: -1px 11px 18px 7px rgba(57, 58, 58, 0.2)
+  position: relative
+  z-index: 55
+  .header-fix
+    justify-content: space-between
+  .menu
+    ul
+      display: flex
+      align-items: stretch
+      align-content: space-between
+      justify-content: space-between
+      height: 100%
+      li
+        width: 33%
+        display: flex
+        align-items: stretch
+        justify-content: space-around
+    a
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: space-around
+      color: #fff
+      text-decoration: none
+      text-transform: uppercase
+      &:hover
+        background: #fff
+        color: #000
+main
+  
+.cart
+  &__auto
+    .trigger
+      width: 120px
+      height: 90px
+      opacity: .2
+      cursor: pointer
+      border-radius: 0 !important
+      &:hover
+        opacity: 1
+      .items__block
+        position: relative
+        // border: 1px solid #000 !important
+        width: 100%
+        display: flex
+        justify-content: center
+        span
+          bottom: 0%
+          position: absolute
+          font-size: .8rem
+          font-weight: 700
+          text-transform: uppercase
+          &.up
+            top: 15%
+
+  &__body-audio
+    // background: gray
+    height: 140px
+    .wrap
+      padding-bottom: 10px
+      overflow: visible
+    .cart-button
+      padding-top: 1rem
+      #msMiniCart
+        padding: 1rem .3rem
+        .empty
+          font-size: .8rem
+        .not_empty
+          
+          font-size: .8rem
+          strong
+            font-weight: 700
+      .btn
+        font-size: 1rem
+        
+        border: 0
+        color: #fff
+        text-align: center
+        text-transform: uppercase
+        border-radius: 10px
+        background: #000
+        border-bottom: 1px solid $colb
+        cursor: pointer
+        padding: .5rem 1rem .3rem
+
+    .catalog-auto
+      padding-top: 1rem
+      .link-link
+        color: #fff
+        text-align: center
+        text-transform: uppercase
+        border-radius: 10px
+        background: #000
+        border-bottom: 1px solid $colb
+        cursor: pointer
+        padding: .5rem .5rem
+        &:hover
+          font-weight: 700
+          
+          
+      .name-auto
+        padding: 1rem
+        padding-left: 0
+        display: flex
+        flex-direction: column
+        font-size: .7rem
+        span
+          padding: .3rem 1rem
+          font-weight: 700
+          font-size: 1rem
+    .cart-container
+      position: relative
+      display: flex
+      justify-content: center
+      height: 100px
+    .items
+      height: 128px
+      position: relative
+      display: flex
+      justify-content: flex-start
+      z-index: 2
+      border: 1px solid #fff
+      border-radius: 20px
+      padding: 0 10px 10px
+      background: #fff
+      .btn-default
+        font-size: .5rem
+        color: #000
+        border: 0
+        background: #0000000d
+        position: absolute
+        right: 0
+        top: 10px
+        width: 25px
+        height: 25px
+        border-radius: 25px
+      &:hover
+        border: 1px solid #0000000d
+        -webkit-box-shadow: -1px 20px 7px -14px rgba(57, 58, 58, 0.2)
+        -moz-box-shadow: -1px 20px 7px -14px rgba(57, 58, 58, 0.2)
+        box-shadow: -1px 20px 7px -14px rgba(57, 58, 58, 0.2)
+        .btn-default
+          color: #fff
+          background: #000
+      &.default
+        position: absolute
+        z-index: 1
+      &__block
+        position: relative
+        width: 200px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        &__title
+          color: #fff
+          padding: .5rem
+          background: #000
+    img
+      max-height: 100%
+      display: block
+    .img
+      height: 100px
+    .my-dinamicclass
+      display: flex
+      flex-wrap: nowrap
+      width: 225px
+      height: 130px
+      overflow: hidden
+      .items
+        display: none
+        &.b8g
+          display: flex
+  &__main-central
+    height: 650px
+    +bg(audiohackerauto,png)
+    background-position: 48% 0
+    background-repeat: no-repeat
+    background-size: cover
+    @media screen and ( max-width: 960px )
+      background-size: 320%
+    .dasp
+
+      .dual-container
+        // background: #000
+        height: 10px
+      &.x2
+        .dual-container
+          height: 10px
+  &__tweet-audio,&__dinamic-audio
+    .dual-container
+      .wrap
+        padding-bottom: 10px
+      .cart-container
+        display: flex
+      &.left-container
+        .cart-container
+          justify-content: flex-end
+      &.right-container
+        .cart-container
+          justify-content: flex-start
+      .cart-container
+        .items
+          max-width: 114px
+          background: #000
+          position: relative
+          display: flex
+          justify-content: flex-start
+          z-index: 2
+          border: 1px solid #fff
+          // border-radius: 20px
+          padding: 0 10px 10px
+          background: #fff
+          margin: .1rem 0
+          &.default
+            max-width: 100px
+          &__block__title
+            padding: .1rem
+            font-size: .7rem
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+          .btn-default
+            font-size: .5rem
+            color: #000
+            border: 0
+            background: #0000000d
+            position: absolute
+            right: 5px
+            top: 10px
+            width: 25px
+            height: 25px
+            border-radius: 25px
+          &:hover
+            border: 1px solid #0000000d
+            -webkit-box-shadow: -1px 20px 7px -14px rgba(57, 58, 58, 0.2)
+            -moz-box-shadow: -1px 20px 7px -14px rgba(57, 58, 58, 0.2)
+            box-shadow: -1px 20px 7px -14px rgba(57, 58, 58, 0.2)
+            .btn-default
+              color: #fff
+              background: #000
+          .img
+            height: 70px
+            img
+              max-height: 100%
+              display: block
+  &__dinamic-audio 
+    .dual-container.left-container
+      .cart-container
+        max-height: 300px
+        display: flex
+        flex-flow: row wrap
+        justify-content: flex-end
+        align-items: center
+        align-content: center
+        .my-dinamicclass
+          display: flex
+          max-width: 343px
+          flex-wrap: wrap
+          height: 280px
+          flex-direction: row-reverse
+          align-items: flex-start
+    .dual-container.right-container  
+      .cart-container
+        max-height: 300px
+        display: flex
+        flex-flow: row-reverse wrap
+        justify-content: flex-end
+        align-items: flex-start
+        align-content: flex-start 
+        .my-dinamicclass
+          display: flex
+          max-width: 343px
+          flex-wrap: wrap
+          height: 280px
+          align-items: flex-start
+    .items
+      &.b16g,&.b8g,&.b10g,&.b12g,&.b18g,&.b22g,&.b23g,&.b24g,&.b25g
+        display: none !important
+        width: 0 !important
+        height: 0 !important
+      .img
+        height: 80px !important
+        
+  &__tweet-audio
+    .left-container
+      .cart-container
+        .my-dinamicclass
+          flex-direction: row-reverse
+    .right-container
+        .cart-container
+          justify-content: flex-start
+          .my-dinamicclass
+            flex-direction: row
+    .cart-container
+      .my-dinamicclass
+        display: flex
+        flex-wrap: wrap
+        .items
+          display: none !important
+          &.b16g
+            display: flex !important
+  &__amplifier-audio
+    .cart-container
+      display: flex
+      justify-content: center
+      .my-dinamicclass
+        display: flex
+        .items
+          background: #000
+          position: relative
+          justify-content: flex-start
+          z-index: 2
+          border: 1px solid #fff
+          border-radius: 20px
+          padding: 0 10px 10px
+          background: #fff
+          display: none
+          &.b10g
+            display: flex
+          &__block__title
+            color: #fff
+            background: #000
+            padding: .3rem
+            font-size: .8rem
+            display: flex
+            text-align: center
+            align-items: center
+            justify-content: center
+          .btn-default
+            font-size: .5rem
+            color: #000
+            border: 0
+            background: #0000000d
+            position: absolute
+            right: 5px
+            top: 10px
+            width: 25px
+            height: 25px
+            border-radius: 25px
+          &:hover
+            border: 1px solid #0000000d
+            -webkit-box-shadow: -1px 20px 7px -14px rgba(57, 58, 58, 0.2)
+            -moz-box-shadow: -1px 20px 7px -14px rgba(57, 58, 58, 0.2)
+            box-shadow: -1px 20px 7px -14px rgba(57, 58, 58, 0.2)
+            .btn-default
+              color: #fff
+              background: #000
+          .img
+            height: 100px
+            img
+              max-height: 100%
+              display: block
+.block_cart
+  width: 100%
+  .wrap
+    justify-content: center
+  .btn
+    margin-bottom: 1rem
+    border-radius: 7px
+    color: #fff
+    border: 0
+    padding: 1rem
+    background: #000
+    &:hover
+      background: #222222
+// Корзина
+
+#msMiniCart.full
+  .not_empty
+    background: #f3f3f3
+    padding: 1rem
+    font-size: .9rem
+
+      

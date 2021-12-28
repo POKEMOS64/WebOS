@@ -1,0 +1,55 @@
+.reviews
+  background: #F0F0F0
+  padding-bottom: 5.3rem
+  &__title
+    margin-top: 3rem
+    margin-bottom: 2rem
+  &__box-carusel
+    padding: 0 3rem !important
+    .owl-nav
+      position: absolute
+      top: 50%
+      left: -30px
+      width: 100%
+      @media ( max-width:960px )
+        display: none
+      button
+        width: 30px
+        height: 30px
+        
+        &.owl-prev
+          background: #F0F0F0
+          +bg(left_arrow,png) 
+          background-repeat: no-repeat
+        &.owl-next
+          background: #F0F0F0
+          +bg(right_arrow,png)
+          background-repeat: no-repeat
+      .owl-next
+        position: absolute
+        right: -30px
+  &__carousel
+    position: relative
+    .item
+      padding: .5rem
+      max-width: 305px
+      height: 305px
+      background: #fff
+      @media ( max-width:1000px )
+        max-width: 100%
+        p
+          font:
+            size: .8rem
+      p
+        line-height: 1.33
+      img
+        width: auto
+        height: auto
+      &__text
+        display: flex
+        justify-content: center
+        align-items: center
+        font:
+          size: 1.25rem
+          weight: 700
+        

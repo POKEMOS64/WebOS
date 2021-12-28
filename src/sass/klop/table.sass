@@ -1,0 +1,55 @@
+.working_methods
+  background: #F8F9F8
+  &__title
+    margin-top: 3rem
+    margin-bottom: 2rem
+  &__table
+    padding-bottom: 3rem !important
+    .table
+      display: flex
+      flex-direction: column
+      button
+        background: none
+        color: #949393
+        border: 0
+        text-align: right
+        font:
+          size: 1.25rem
+          weight: 700
+        text-transform: uppercase
+        padding: 1rem 0 .2rem
+        margin-top: 1.8rem
+        @media ( max-width:990px )
+          margin-top: .5rem
+          border: 1px solid #cccc
+          border-radius: 25px
+          padding: .5rem 1rem
+          font:
+            size: 1.1rem
+          &.active
+            border-bottom: 1px solid #FFCC15
+            span
+              border: 0
+
+        &.active
+          color: #000
+          span
+            border-bottom: 1px solid #FFCC15
+            padding-bottom: .3rem
+    .tabcontent
+      @media ( max-width:990px )
+        p
+          line-height: 1.33
+      .wrap
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: center
+      img
+        width: auto
+        height: auto
+      &__text
+        padding: .5rem
+          
+
+      

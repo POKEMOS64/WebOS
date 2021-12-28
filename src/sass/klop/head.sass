@@ -1,0 +1,58 @@
+header
+  .head
+    &__header
+    &__logo
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      &__pictures
+        margin: 0 2rem 0 0rem
+        @media ( max-width:990px )
+
+      &__text
+        font:
+          weight: 700
+        b
+          font:
+            size: 2.5rem
+          vertical-align: top
+          text-transform: uppercase
+        h1
+          display: block
+          font:
+            size: .9rem
+            weight: 600
+        @media ( max-width:990px )
+          b
+            font:
+              size: 1.2rem
+    &__contact
+      display: flex
+      @extend .head__logo
+      &__ico
+        margin: 0 5rem 0 2rem
+        @media ( max-width:990px )
+          margin: 0 1rem
+          img
+            width: 50%
+      &__link
+        position: relative
+        padding-left: 50px
+        @extend .head__logo
+        text-decoration: none
+        color: black
+        font:
+          size: 1.6rem
+          weight: 400
+        @media ( max-width:990px )
+          font:
+            size: 1rem
+        &::before
+          position: absolute
+          left: 0
+          display: block
+          content: ''
+          width: 30px
+          height: 30px
+          +bg(WA-02__1what,png)
+          background-repeat: no-repeat

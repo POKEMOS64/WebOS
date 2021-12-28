@@ -1,0 +1,31 @@
+.choice
+  &__title
+    margin-top: 4rem
+    margin-bottom: 2rem
+    
+  .items
+    margin-bottom: 3rem
+    @media ( max-width:760px )
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-items: center
+      // border-radius: 25px
+      border: 1px solid #cccc
+      padding: 1rem
+    &__icon
+      @media ( max-width:760px )
+        width: 50%
+    &__title
+      margin: 1rem auto
+      font:
+        size: 1.2rem
+        weight: 700
+      text-transform: uppercase
+      text-align: center
+      @media ( max-width:760px )
+        width: 50%
+        font:
+          size: 1rem
+    &__text
+      padding: 0 1.5rem

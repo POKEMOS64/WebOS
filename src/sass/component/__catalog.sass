@@ -1,0 +1,230 @@
+main.catalog
+  // background: #000000
+  img
+    max-width: 100%
+    max-height: 100%
+  .container
+    background: #fff
+    .left-box
+      &__link
+        @extend .catalog__box__deff
+        border-left: 5px
+    .right-box
+      &__link
+        @extend .catalog__box__deff
+        border-right: 5px
+    .middle-box
+      .tab-container-info-box
+        border: 1px solid #d1d1d1
+        .name 
+          padding: .5rem
+          margin-bottom: 1rem
+          color: #fff
+          font-family: $font2
+          background: #000
+        .content
+          padding: .5rem
+          p
+            margin-bottom: .5rem
+            font-size: 1rem
+            line-height: 1.33
+            font-weight: 100
+            span
+              display: block
+
+
+
+.page-catalog
+  &__name
+    border-bottom: 1px solid #cccccc
+    font:
+      family: $font2
+    h1
+      margin: 3rem 2rem
+  &__menu
+    // background: #eeeeee
+    border-right: 1px solid #cccccc
+    .menu
+      a
+        &.end
+          padding: .5rem
+          color: #fff
+          font-weight: 100
+          background: #000
+      &>ul
+        &>li
+          margin: 1rem 0
+          i
+            margin: .3rem
+          &>a
+            background: #fff
+            display: block
+            padding: .5rem
+            margin: .1rem 0
+            font:
+              size: .8rem
+              weight: 100
+            
+            
+          &>ul
+            li
+              a
+                position: relative
+                background: #fff
+                text-transform: none
+                display: block
+                padding: .5rem
+                font:
+                  weight: 400
+                  size: .8rem
+                margin: .1rem 1rem
+                &::before
+                  position: absolute
+                  right: 0
+                  left: 0
+                  bottom: 0
+                  margin: 0 auto
+                  content: ''
+                  width: 0
+                  height: 1px
+                  background: #000000
+                &:hover
+                  background: #f8f8f8
+                  text-decoration: none
+                  &::before
+                    width: 100%
+                    @extend .bottom-liner
+  &__content
+
+    .product-list
+      padding-top: .5rem
+      padding-bottom: 10rem
+    .items
+      position: relative
+      padding: 1rem
+      font:
+        size: .8rem
+        weight: 100
+      &:hover
+        box-shadow: -4px 7px 8px 0px rgba(34, 60, 80, 0.2)
+        .price
+          display: flex
+      span
+        font:
+          weight: 700
+      .name
+        font-size: 1.3rem
+        text-align: center
+        margin: 1rem 0
+        min-height: 3rem
+      .options
+        div
+          display: flex
+          align-items: stretch
+          justify-content: space-between
+          margin: .3rem 0
+          padding: .2rem .5rem
+          border-bottom: 1px solid #cccccc
+      .price-rub
+        display: flex
+        align-items: center
+        font-size: 1.2rem
+        justify-content: center
+        padding: .3rem 1rem
+        border-bottom: 1px solid 
+        .cell
+          text-align: center
+      .price
+        position: absolute
+        z-index: 99
+        width: 100%
+        left: 0
+        box-shadow: -4px 7px 8px 0px rgba(34, 60, 80, 0.2)
+        // border: 1px solid
+        // bottom: 0
+        background: #fff
+        display: none
+        padding: 1rem
+        justify-content: space-around
+        align-items: center
+        .cell
+          font-size: 1.2rem
+          text-align: center
+        .btn-list
+          width: 100%
+          display: flex
+          flex-direction: column
+          button,a
+            width: 100%
+            margin: .3rem 0
+            border: 0
+            color: #fff
+            background: #000
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-around
+            padding: .7rem 0
+            font-size: .8rem
+            font-weight: 100 !important
+            text-decoration: none
+            border-radius: 5px
+          a
+            padding: .7rem 0
+      &.tabs
+      &.line
+        border: 1px solid #cccccc
+        margin-bottom: .5rem
+        .items__info__box
+          width: 100%
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+          align-items: stretch
+          .price-rub
+            align-items: center
+            justify-content: center
+            font-size: 1rem
+            border: 0
+          .block
+            display: flex
+            align-items: center
+          .pictures
+            max-width: 100px
+          .price
+            max-width: 150px
+            display: flex
+            position: relative
+            box-shadow: none
+    .product-list
+      display: flex
+      flex-wrap: wrap
+      .items
+        width: 200px
+      &.grid
+        .items
+          width: 100%
+          border: 1px solid #dadada
+          margin-bottom: .5rem
+          &__info__box
+            display: flex
+            width: 100%
+            justify-content: space-between
+            align-items: center
+
+            .block
+              display: flex
+              align-items: center
+              .pictures
+                width: 150px
+              .name
+                width: 150px
+                font-size: 1rem
+            .price-rub
+              border: 0
+            .price
+              box-shadow: none
+              width: 180px
+              position: relative
+              display: block
+        

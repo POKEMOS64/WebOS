@@ -1,0 +1,132 @@
+<div id="msCart">
+  <!-- Если пусто то показываем это -->
+  {if $products | length == 0}
+  <div class="alert alert-warning">
+      {'ms2_cart_is_empty' | lexicon}
+  </div>
+  <!-- Содержимое с товаром в корзине -->
+  {else}
+  <div class="shop_block">
+      <div class="wrap">
+        <!-- Шапка корзины -->
+        <div class="header xl12">
+          <div class="title">
+            {'ms2_cart_title' | lexicon}
+          </div>
+          <div class="count">
+            {'ms2_cart_count' | lexicon}
+          </div>
+          <div class="price">
+            {'ms2_cart_price' | lexicon}
+          </div>
+          <div class="cost">
+            {'ms2_cart_cost' | lexicon}
+          </div>
+          <div class="remove">
+            
+          </div>
+        </div>
+        <!-- End Шапка корзины -->
+        {foreach $products as $product}
+          {var $image}
+              {if $product.thumb?}
+                  <img src="{$product.thumb}" alt="{$product.pagetitle}" title="{$product.pagetitle}"/>
+              {else}
+                  <img src="{'assets_url' | option}components/minishop2/img/web/ms2_small.png"
+                      srcset="{'assets_url' | option}components/minishop2/img/web/ms2_small@2x.png 2x"
+                      alt="{$product.pagetitle}" title="{$product.pagetitle}"/>
+              {/if}
+          {/var}
+
+          <div 
+          id="productfull {$product.key}"
+          class="product_container" 
+          data='{$product.id__category[0]}'>
+          <div class="wrap">
+            <div class="title">
+              <!-- Картинка она нахрен не нужна, но модель оставим-->
+              <div class="col xl1 title__imgpic">
+                {if $product.id?}
+                <a href="{$product.id | url}">{$image}</a>
+                {else}
+                  {$image}
+                {/if}
+              </div>
+              
+              <!-- End Картинка -->
+              <!-- Засунем титульник сюда в линке -->
+              <div class="col xl11 title__name">
+                {if $product.id?}
+                    <a href="{$product.id | url}">{$product.pagetitle}</a>
+                {else}
+                    {$product.name}
+                {/if}
+                {if $product.options?}
+                    <div class="small">
+                        {$product.options | join : '; '}
+                    </div>
+                {/if}
+              </div>
+              <!-- End Засунем титульник сюда в линке -->
+            </div>
+            <div class="count">
+              <div class="wrap">
+                <form method="post" class="ms2_form" role="form">
+                    <input type="hidden" name="key" value="{$product.key}"/>
+                    <div class="form-group">
+                        <div class="">
+                            <input type="number" name="count" value="{$product.count}" class="form-control"/>
+                            <div class="">
+                                <span class="">{'ms2_frontend_count_unit' | lexicon}</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm" type="submit" name="ms2_action" value="cart/change">&#8635;</button>
+                    </div>
+                </form>
+              </div>
+            </div>
+            <div class="price">
+                <span class="price__name">{$product.price} {'ms2_frontend_currency' | lexicon}</span>
+            </div>
+            <div class="cost">
+              <span class="mr-2"><span class="ms2_cost">{$product.cost}</span> {'ms2_frontend_currency' | lexicon}</span>
+            </div>
+            <div class="remove">
+              <form method="post" class="ms2_form">
+                <input type="hidden" name="key" value="{$product.key}">
+                <button class="btn remove" type="submit" name="ms2_action" value="cart/remove">&times;</button>
+            </form>
+            </div>
+            {/foreach}
+            <div class="footer">
+              <div class="total">
+                {'ms2_cart_total' | lexicon}:
+              </div>
+              <div class="total__count">
+                <span class="ms2_total__count">{$total.count}</span>
+                      {'ms2_frontend_count_unit' | lexicon}
+              </div>
+              <div class="total__weight">
+                <span class="ms2_total__weight">{$total.weight}</span>
+                      {'ms2_frontend_weight_unit' | lexicon}
+              </div>
+              <div class="total_cost">
+                <span class="ms2_total_cost">{$total.cost}</span>
+                      {'ms2_frontend_currency' | lexicon}
+              </div>
+            </div>
+            <!-- Конец обвертки wrap -->
+          </div>
+          <div class="btn__clear">
+            <form method="post">
+                <button type="submit" name="ms2_action" value="cart/clean" class="btn clear">
+                    {'ms2_cart_clean' | lexicon}
+                </button>
+            </form>
+          </div>
+
+          </div>
+      </div>
+  </div>
+  {/if}
+</div>

@@ -1,0 +1,254 @@
+
+.auto
+  background: #000
+  background-image: url('/img/auto2.jpg')
+  background-size: contain
+  background-position: 51%
+  background-repeat: no-repeat
+  height: 700px
+  &>.container
+    &>.wrap
+      height: 100vh
+      // align-content: center
+  .kull
+    a
+      position: absolute
+      width: 100%
+      height: 100%
+      // background: gray
+      &:hover
+        background: #0000009e
+  .twitter
+    height: 10vh
+    margin-bottom: 1rem
+    position: relative
+    top: 25vh
+    // background: #fff
+    .block_link 
+      margin: 0 auto
+      width: 350px
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      // background: gray
+    .items
+      width: 150px
+      height: 80px
+      display: flex
+      flex-direction: column
+      align-items: center
+      .name
+        text-align: center
+        background: #fff
+        padding: 0 1rem
+      img
+        display: block
+        height: 90%
+        border-radius: 300px
+  .midbasy
+    height: 10vh
+    top: -10vh
+    position: relative
+    
+    // background: #fff
+    .block_link 
+      margin: 0 auto
+      width: 350px
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      // background: gray
+    .items
+      width: 200px
+      height: 160px
+      display: flex
+      flex-direction: column
+      align-items: center
+      .name
+        text-align: center
+        background: #fff
+        padding: 0 1rem
+      img
+        display: block
+        height: 55%
+        border-radius: 300px
+  .cart
+    // width: 320px
+    right: 0
+    min-height: 100px
+    bottom: 0
+    // position: absolute
+    background: #FFF
+    padding: 1rem
+    border: 2px solid #a33232
+    border-radius: 10px 0 0 0
+
+.modal_categor
+  .b-popup
+    position: fixed
+    width: 100%
+    min-height: 100%
+    background-color: rgba(0, 0, 0, 0.5)
+    overflow: hidden
+    position: fixed
+    overflow-y: scroll
+    top: 0px
+    .b-popup-content
+      margin: 10px auto 0px auto
+      padding: 10px
+      background-color: #92929259
+      border-radius: 5px
+      box-shadow: 0px 0px 10px #000
+.todo_list
+  .container
+    // background: #fff
+    border-radius: 10px
+    &>.wrap
+      display: flex
+      flex-direction: row
+      padding-left: 0
+      
+      .filtter
+        display: flex
+        flex-direction: column
+        &__category
+          padding: .5rem
+          h3
+            color: #fff
+            padding: .5rem
+            border-radius: 5px
+            background: #000
+          .list
+            margin: .2rem
+            a
+              display: block
+              text-decoration: none
+              color: #000
+              padding: .2rem
+              font-size: .9rem
+              &:hover
+                color: #fff
+                background: #000
+      .item_tovar
+        align-items: center
+
+        .todo_list__tovar
+          border: 1px solid gray
+          border-radius: 5px
+          margin-bottom: .3rem
+          .wrap
+            padding: 0
+            .ms2_form
+              display: flex
+              flex-direction: row
+              padding-left: 0
+              width: 100%
+          img
+            width: 70%
+          .name
+            font-size: .9rem
+        .col
+          display: flex
+          align-items: center
+        .opt
+          display: flex
+          align-items: center
+          flex-direction: column
+          justify-content: center
+          align-items: flex-start
+          font-size: .9rem
+          .opt_1
+            width: 100%
+        .cell
+          .wrap
+            display: flex
+            align-items: center
+            justify-content: center
+        .price__click
+          display: flex
+          flex-direction: column
+          align-items: stretch
+          justify-content: center
+          padding: .5rem
+          box-sizing: border-box
+          button,a
+            padding: .5rem 1rem
+            border-radius: 5px
+            color: #fff
+            border: 1px solid #fff
+            background: #000
+            font-size: .7rem
+            margin: .4rem 0
+            border: 1px solid #000
+            text-decoration: none
+            font-family: 'PT Sans Narrow', sans-serif
+            text-align: center
+            &:hover
+              color: #000
+              background: #fff
+
+#msCart
+  .shop_block
+    width: 100%
+    .wrap
+      flex-direction: column
+    .header
+      display: flex
+      font-size: .8rem
+      flex-wrap: nowrap
+      width: 320px
+      div
+        margin: 0 .1rem
+        background: #000
+        color: #fff
+        padding: .3rem
+      .title
+        width: 130px
+      .count
+        width: 70px
+      .price
+        width: 50px
+      .cost
+        width: 50px
+        display: none
+      .remove
+        width: 50px
+  .product_container
+    width: 320px
+    border-bottom: 1px solid #000
+    .wrap
+      flex-direction: row
+      flex-wrap: nowrap
+    &>div
+      margin: 0 .1rem
+      padding: .1rem
+      text-align: center
+    .title
+      width: 130px
+      font-size: .8rem
+      &__imgpic
+        display: none
+    .count
+      width: 75px
+      input
+        width: 60px
+      .form-group
+        display: flex
+        flex-direction: column
+        align-items: center
+    .price
+      width: 50px
+    .cost
+      width: 60px
+      display: none
+    .remove
+      width: 50px
+      padding-left: .5rem
+      button
+        width: 100%
+        background: #fff
+        border: 1px solid #000
+  .footer
+    display: flex
+
+

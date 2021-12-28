@@ -1,0 +1,45 @@
+.geopositions
+  background: #FFCC15
+  +bg(maps_font,png)
+  &__title
+    margin-top: 3rem
+    margin-bottom: 2rem
+  &__list
+    .items
+      ul 
+        margin-left: 2.5rem
+        @media ( max-width:650px )
+          display: flex
+          flex-wrap: wrap
+          margin-left: .5rem
+          li
+            margin: 1rem
+        li
+          position: relative
+          padding-left: 2rem
+          margin-bottom: 1rem
+          font:
+            size: 1rem
+            weight: 600
+          &::before
+            display: block
+            width: 20px
+            height: 20px
+            content: ''
+            position: absolute
+            left: 0
+            +bg(geopositons,png)
+            background-repeat: no-repeat
+  &__descriptions
+    display: flex
+    align-items: center
+    justify-content: center
+    font:
+      size: 1.23rem
+      weight: 700
+    text-transform: uppercase
+    margin-bottom: 2rem
+    @media ( max-width:650px )
+      flex-wrap: wrap
+    img
+      margin: 1.5rem 1rem

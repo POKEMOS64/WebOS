@@ -1,0 +1,140 @@
+nav
+  background: $colbase
+  padding: 1rem 0 .5rem
+  @media ( max-width:990px )
+    display: none
+    padding: .3rem
+  .nav
+    @media ( max-width:760px )
+      position: sticky
+      top: 0
+    &__list
+      display: flex
+      align-items: center
+      justify-content: space-between
+      li
+        a
+          font:
+            size: 1.15rem
+            weight: 600
+          color: black
+          text-decoration: none
+          text-transform: uppercase
+  &.sticky-header
+    display: block
+    top: 0
+    position: fixed
+    z-index: 999
+    width: 100%
+  .namesait
+    display: none
+    @media ( max-width:990px )
+      padding: .5rem
+      display: block
+      font:
+        size: .7rem
+        weight: 700
+  .mobi_menu
+    display: none
+    @media ( max-width:990px )
+      display: flex
+      justify-content: right
+      align-items: center
+      button
+        background: #ffff
+        border-radius: 10px
+        img
+          width: 32px
+          margin: 0
+  .mobi_list
+    display: none
+    &.active
+      display: block
+    @media ( max-width:990px )
+      
+      li
+        width: 90%
+        margin: .3rem 0
+        &.active
+          background: #000
+          a
+            color: #fff
+        a
+          text-transform: uppercase
+          text-decoration: none
+          padding: .5rem
+          border-bottom: 1px solid #fff
+          display: block
+          color: #000
+          &:hover
+            background: #cccc
+            
+.mobiMenu
+  display: inline-block
+  text-align: right
+  min-width: 80px
+  margin-right: 20px
+  position: relatve
+  cursor: pointer
+  transition: background-color 0.3s ease-in-out
+
+.mobiMenu-label
+  font-family: Arial, sans-serif
+  font-weight: bold
+  font-size: 14px
+  color: white
+  text-transform: uppercase
+  display: inline-block
+  vertical-align: text-top
+
+.mobiMenu-icon
+  display: inline-block
+  vertical-align: top
+  text-align: right
+  height: 10px
+  width: 20px
+  margin-top: 1px
+  border-bottom: 2px solid white
+  opacity: 1
+  transition: border 0.2s ease-in-out
+
+  &:before
+    position: relative
+    content: ""
+    display: block
+    height: 2px
+    background-color: white
+    transition: all 0.5s linear
+
+  &:after
+    position: relative
+    content: ""
+    display: block
+    height: 2px
+    background-color: white
+    transition: all 0.5s linear
+    top: 3px
+
+  &.isOpen
+    border: 0 solid transparent
+
+    &:before
+      transform: rotate(-135deg)
+      transform-origin: top middle
+      top: 6px
+      transition: all 0.3s linear
+
+    &:after
+      transform: rotate(135deg)
+      transform-origin: top middle
+      top: 4px
+      transition: all 0.3s linear
+
+.mobiMenu:hover .mobiMenu-icon.isOpen
+  &:before
+    transform: rotate(405deg)
+    transform-origin: middle middle
+
+  &:after
+    transform: rotate(495deg)
+    transform-origin: middle middle
